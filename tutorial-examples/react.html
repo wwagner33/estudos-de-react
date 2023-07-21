@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Primeiros passos com React</title>
 </head>
 <body>
     <div id="app"></div>
-    
+
     <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
@@ -73,6 +73,8 @@
                 <ul>
                     {nomes.map((nome, index) => <li key={index}>{nome}</li>)}
                 </ul>
+                {/*inserindo interatividade no componente. Inserindo um botão. */}
+                <button onClick={() => alert('Clicou no botão')}>Clique aqui</button>
             </div>
         );
     }
@@ -80,7 +82,7 @@
     function Footer() {
         return <h1>Footer</h1>;
     }
-
+    
     function HomePage() {
         {/*this is a comment in React code. Below you have a nested commponet example*/}
         return (
@@ -93,5 +95,10 @@
     }
     ReactDOM.render(<HomePage/>, app);
 </script>
+<p>
+    Parei na parte de State e Hooks. 
+    <a href="https://nextjs.org/learn/foundations/from-javascript-to-react/adding-interactivity-with-state">Tutorial de Next.Js/Parte de React</a>
+
+</p>
 </body>
 </html>
