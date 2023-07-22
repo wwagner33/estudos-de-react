@@ -65,8 +65,23 @@
         );*/}
     }
 
-    function Article() {
+{/*
+State:  "you can think of state as any information in your UI that changes over time, usually triggered by user interactions".     
+State é uma informação guardada em um componente. Você pode acessar estas informações através do método useState(). Ele retorna um array com duas posições. A primeira é o valor da variável e a segunda é uma função para atualizar o valor da variável. Você por atribuir uma valor à variável através do construtor useState(valorInicial).
+
+Exemplo: 
+const [counter, setCounter] =React.useState(0); //atribui 0 à variável counter.
+
+*/}
+
+   function Article() {
         const nomes = ['João', 'Maria', 'José'];
+        let [likes,setLikes] = React.useState(0);
+
+        function handClick() {
+            setLikes(likes+1);
+        }
+
         return (
             <div>
                 <h1>Article</h1>
@@ -74,7 +89,7 @@
                     {nomes.map((nome, index) => <li key={index}>{nome}</li>)}
                 </ul>
                 {/*inserindo interatividade no componente. Inserindo um botão. */}
-                <button onClick={() => alert('Clicou no botão')}>Clique aqui</button>
+                <button onClick={handClick}>{likes}</button>
             </div>
         );
     }
